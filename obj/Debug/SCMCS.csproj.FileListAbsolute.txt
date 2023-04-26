@@ -24,3 +24,16 @@ G:\GUANDER\APPS\C\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.GenerateResource.cac
 G:\GUANDER\APPS\C\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.CoreCompileInputs.cache
 G:\GUANDER\APPS\C\HTML_Viewer_Editor\obj\Debug\HtmlViewerEditor.exe
 G:\GUANDER\APPS\C\HTML_Viewer_Editor\obj\Debug\HtmlViewerEditor.pdb
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\bin\Debug\HtmlViewerEditor.exe.config
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\bin\Debug\HtmlViewerEditor.exe
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\bin\Debug\HtmlViewerEditor.pdb
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.AssemblyReference.cache
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.SuggestedBindingRedirects.cache
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.About.resources
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.FontSet.resources
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.Menu.resources
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.Properties.Resources.resources
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.GenerateResource.cache
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.CoreCompileInputs.cache
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\HtmlViewerEditor.exe
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\HtmlViewerEditor.pdb

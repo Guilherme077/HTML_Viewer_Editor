@@ -44,6 +44,8 @@ namespace SCMCS
             this.abrirArquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.coresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,9 +57,11 @@ namespace SCMCS
             this.browserAboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.IconSaveN = new System.Windows.Forms.ToolStripLabel();
             this.DirectoryName = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ASBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.OnAS = new System.Windows.Forms.ToolStripMenuItem();
+            this.OffAS = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -181,14 +185,14 @@ namespace SCMCS
             // abrirArquivoToolStripMenuItem
             // 
             this.abrirArquivoToolStripMenuItem.Name = "abrirArquivoToolStripMenuItem";
-            this.abrirArquivoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.abrirArquivoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.abrirArquivoToolStripMenuItem.Text = "Open file";
             this.abrirArquivoToolStripMenuItem.Click += new System.EventHandler(this.abrirArquivoToolStripMenuItem_Click);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.salvarToolStripMenuItem.Text = "Save as";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
@@ -196,16 +200,30 @@ namespace SCMCS
             // 
             this.salvarToolStripMenuItem1.Name = "salvarToolStripMenuItem1";
             this.salvarToolStripMenuItem1.ShortcutKeyDisplayString = "Ctrl + S";
-            this.salvarToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.salvarToolStripMenuItem1.Size = new System.Drawing.Size(197, 28);
             this.salvarToolStripMenuItem1.Text = "Save";
             this.salvarToolStripMenuItem1.Click += new System.EventHandler(this.salvarToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(194, 6);
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
+            this.imprimirToolStripMenuItem.Text = "Print";
+            this.imprimirToolStripMenuItem.Click += new System.EventHandler(this.imprimirToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton3
             // 
             this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.coresToolStripMenuItem,
-            this.fontSizeToolStripMenuItem});
+            this.fontSizeToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.ASBtn});
             this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton3.Image = global::SCMCS.Properties.Resources.TextIcon;
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -219,27 +237,27 @@ namespace SCMCS
             this.fundoToolStripMenuItem,
             this.letrasToolStripMenuItem});
             this.coresToolStripMenuItem.Name = "coresToolStripMenuItem";
-            this.coresToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
+            this.coresToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.coresToolStripMenuItem.Text = "Colors";
             // 
             // fundoToolStripMenuItem
             // 
             this.fundoToolStripMenuItem.Name = "fundoToolStripMenuItem";
-            this.fundoToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
+            this.fundoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.fundoToolStripMenuItem.Text = "Backcolor";
             this.fundoToolStripMenuItem.Click += new System.EventHandler(this.fundoToolStripMenuItem_Click);
             // 
             // letrasToolStripMenuItem
             // 
             this.letrasToolStripMenuItem.Name = "letrasToolStripMenuItem";
-            this.letrasToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
+            this.letrasToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.letrasToolStripMenuItem.Text = "Text";
             this.letrasToolStripMenuItem.Click += new System.EventHandler(this.letrasToolStripMenuItem_Click);
             // 
             // fontSizeToolStripMenuItem
             // 
             this.fontSizeToolStripMenuItem.Name = "fontSizeToolStripMenuItem";
-            this.fontSizeToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
+            this.fontSizeToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.fontSizeToolStripMenuItem.Text = "Font size";
             this.fontSizeToolStripMenuItem.Click += new System.EventHandler(this.fontSizeToolStripMenuItem_Click);
             // 
@@ -260,20 +278,20 @@ namespace SCMCS
             // supportToolStripMenuItem
             // 
             this.supportToolStripMenuItem.Name = "supportToolStripMenuItem";
-            this.supportToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.supportToolStripMenuItem.Size = new System.Drawing.Size(206, 28);
             this.supportToolStripMenuItem.Text = "Support";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(206, 28);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // browserAboutToolStripMenuItem
             // 
             this.browserAboutToolStripMenuItem.Name = "browserAboutToolStripMenuItem";
-            this.browserAboutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.browserAboutToolStripMenuItem.Size = new System.Drawing.Size(206, 28);
             this.browserAboutToolStripMenuItem.Text = "Browser About";
             this.browserAboutToolStripMenuItem.Click += new System.EventHandler(this.browserAboutToolStripMenuItem_Click);
             // 
@@ -293,21 +311,37 @@ namespace SCMCS
             this.DirectoryName.Size = new System.Drawing.Size(0, 24);
             this.DirectoryName.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
-            // 
-            // imprimirToolStripMenuItem
-            // 
-            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.imprimirToolStripMenuItem.Text = "Print";
-            this.imprimirToolStripMenuItem.Click += new System.EventHandler(this.imprimirToolStripMenuItem_Click);
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            // 
+            // ASBtn
+            // 
+            this.ASBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OnAS,
+            this.OffAS});
+            this.ASBtn.Name = "ASBtn";
+            this.ASBtn.Size = new System.Drawing.Size(224, 28);
+            this.ASBtn.Text = "Auto Save (ON)";
+            // 
+            // OnAS
+            // 
+            this.OnAS.Name = "OnAS";
+            this.OnAS.Size = new System.Drawing.Size(224, 28);
+            this.OnAS.Text = "On";
+            this.OnAS.Click += new System.EventHandler(this.OnAS_Click);
+            // 
+            // OffAS
+            // 
+            this.OffAS.Name = "OffAS";
+            this.OffAS.Size = new System.Drawing.Size(224, 28);
+            this.OffAS.Text = "Off";
+            this.OffAS.Click += new System.EventHandler(this.OffAS_Click);
             // 
             // Menu
             // 
@@ -374,6 +408,10 @@ namespace SCMCS
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem ASBtn;
+        private System.Windows.Forms.ToolStripMenuItem OnAS;
+        private System.Windows.Forms.ToolStripMenuItem OffAS;
     }
 }
 

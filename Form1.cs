@@ -83,8 +83,9 @@ namespace SCMCS
             {
                 try
                 {
-                    File.Create(SalvarArquivo.FileName);
+                    FileStream files = File.Create(SalvarArquivo.FileName);
                     DirectoryName.Text = SalvarArquivo.FileName;
+                    files.Close();
                     
                 }
                 catch
@@ -160,24 +161,27 @@ namespace SCMCS
 
             if (UltimoAcessoFile == 1)
             {
-                try
+                if (Properties.Settings.Default.AutoSave)
                 {
-                    using (FileStream file = File.Open(DirectoryName.Text, FileMode.Truncate))
+                    try
                     {
-                        StreamWriter sw = new StreamWriter(file);
-                        foreach (string linha in TextFile.Lines)
+                        using (FileStream file = File.Open(DirectoryName.Text, FileMode.Truncate))
                         {
-                            sw.WriteLine(linha);
+                            StreamWriter sw = new StreamWriter(file);
+                            foreach (string linha in TextFile.Lines)
+                            {
+                                sw.WriteLine(linha);
+                            }
+                            sw.Close();
+                            file.Close();
+                            IconSaveN.Visible = false;
+
                         }
-                        sw.Close();
-                        file.Close();
-                        IconSaveN.Visible = false;
-                        
                     }
-                }
-                catch
-                {
-                    //MessageBox.Show("The file cant be saved!");
+                    catch
+                    {
+                        MessageBox.Show("Error in auto save, try to create another file or disable te auto save in menu.");
+                    }
                 }
                 ReloadWebNav();
             }
@@ -236,7 +240,17 @@ namespace SCMCS
             }
             else
             {
-                MessageBox.Show("The last file opened in the program cant be opened. File: " + Properties.Settings.Default.UltimoDiretorio);
+                MessageBox.Show("The last file opened in the software cant be opened. File: " + Properties.Settings.Default.UltimoDiretorio);
+                
+            }
+
+            if (Properties.Settings.Default.AutoSave)
+            {
+                ASBtn.Text = "Auto Save (On)";
+            }
+            else
+            {
+                ASBtn.Text = "Auto Save (Off)";
             }
             
         }
@@ -400,6 +414,22 @@ namespace SCMCS
            // printDialog1.Document = DirectoryName.Text;
             //printDialog1.ShowDialog();
             
+        }
+
+        private void OnAS_Click(object sender, EventArgs e)
+        {
+            ASBtn.Text = "Auto Save (ON)";
+            Properties.Settings.Default.AutoSave = true;
+            Properties.Settings.Default.Save();
+            MessageBox.Show("The Auto Save is now on");
+        }
+
+        private void OffAS_Click(object sender, EventArgs e)
+        {
+            ASBtn.Text = "Auto Save (Off)";
+            Properties.Settings.Default.AutoSave = false;
+            Properties.Settings.Default.Save();
+            MessageBox.Show("The Auto Save is now off");
         }
 
         private void Menu_MouseMove_1(object sender, MouseEventArgs e)
