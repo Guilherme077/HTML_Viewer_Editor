@@ -67,7 +67,7 @@ namespace SCMCS
             }
             catch
             {
-                MessageBox.Show("The file cant be opened!");
+                Msg("The file cant be opened!");
             }
 
 
@@ -90,7 +90,7 @@ namespace SCMCS
                 }
                 catch
                 {
-                    MessageBox.Show("The file cant be saved!");
+                    Msg("The file cant be saved!");
                 }
                 
             }
@@ -120,7 +120,7 @@ namespace SCMCS
         {
             if (UltimoAcessoFile == 0)
             {
-                MessageBox.Show("Não há diretório existente, utilize 'Salvar como' ou 'Abrir arquivo'");
+                Msg("Não há diretório existente, utilize 'Salvar como' ou 'Abrir arquivo'");
             }
             if (UltimoAcessoFile == 1)
             {
@@ -141,7 +141,7 @@ namespace SCMCS
                 }
                 catch
                 {
-                    MessageBox.Show("The file cant be saved!");
+                    Msg("The file cant be saved!");
                 }
                 
             }
@@ -180,7 +180,7 @@ namespace SCMCS
                     }
                     catch
                     {
-                        MessageBox.Show("Error in auto save, try to create another file or disable te auto save in menu.");
+                        Msg("Error in auto save, try to create another file or disable te auto save in menu.");
                     }
                 }
                 ReloadWebNav();
@@ -212,6 +212,7 @@ namespace SCMCS
             TextFile.ForeColor = Properties.Settings.Default.CorDoTexto; // Seta a cor do texto
             TextFile.Font = Properties.Settings.Default.Fonte;
             splitContainer1.SplitterDistance = Properties.Settings.Default.DistSplitter;
+            BackColor = Properties.Settings.Default.CorJanela;
 
             
 
@@ -240,7 +241,7 @@ namespace SCMCS
             }
             else
             {
-                MessageBox.Show("The last file opened in the software cant be opened. File: " + Properties.Settings.Default.UltimoDiretorio);
+                Msg("The last file opened in the software cant be opened. File: " + Properties.Settings.Default.UltimoDiretorio);
                 
             }
 
@@ -359,7 +360,7 @@ namespace SCMCS
 
         private void browserAboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Browser version: " + "Internet Explorer " + WebNav.Version);
+            Msg("Browser version: " + "Internet Explorer " + WebNav.Version);
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
@@ -421,7 +422,7 @@ namespace SCMCS
             ASBtn.Text = "Auto Save (ON)";
             Properties.Settings.Default.AutoSave = true;
             Properties.Settings.Default.Save();
-            MessageBox.Show("The Auto Save is now on");
+            Msg("The Auto Save is now on");
         }
 
         private void OffAS_Click(object sender, EventArgs e)
@@ -429,7 +430,14 @@ namespace SCMCS
             ASBtn.Text = "Auto Save (Off)";
             Properties.Settings.Default.AutoSave = false;
             Properties.Settings.Default.Save();
-            MessageBox.Show("The Auto Save is now off");
+            Msg("The Auto Save is now off");
+        }
+
+        private void windowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectColor.ShowDialog(); // Pergunta a cor ao usuário
+            Properties.Settings.Default.CorJanela = SelectColor.Color; // Seta a cor conforme citado na chamada do void
+            AtualizaWindow(); // Atualiza as cores da janela e salva
         }
 
         private void Menu_MouseMove_1(object sender, MouseEventArgs e)
@@ -442,6 +450,12 @@ namespace SCMCS
             }
         }
 
+        public void Msg(string text)
+        {
+            MsgWindow FormM = new MsgWindow();
+            FormM.Msg = text;
+            FormM.ShowDialog();
+        }
       
 
 

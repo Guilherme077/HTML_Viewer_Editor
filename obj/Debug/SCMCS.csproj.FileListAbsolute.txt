@@ -37,3 +37,4 @@ G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.GenerateResource.cach
 G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.csproj.CoreCompileInputs.cache
 G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\HtmlViewerEditor.exe
 G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\HtmlViewerEditor.pdb
+G:\PROJETOS(GIT)\HTML_Viewer_Editor\obj\Debug\SCMCS.MsgWindow.resources

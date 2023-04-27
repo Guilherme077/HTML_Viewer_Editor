@@ -41,7 +41,7 @@ namespace SCMCS
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
             // 
             // label2
@@ -53,7 +53,7 @@ namespace SCMCS
             this.label2.Size = new System.Drawing.Size(303, 213);
             this.label2.TabIndex = 1;
             this.label2.Text = "This is a project made in Brazil.\r\n\r\nThe HTML Viewer Editor is a editor for HTML " +
-    "codes that have a differencial, it have a browser integrated!\r\n\r\n©2022 Guilherme" +
+    "codes that have a differencial, it have a browser integrated!\r\n\r\n©2023 Guilherme" +
     " Pilz Moreira\r\n\r\n\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);

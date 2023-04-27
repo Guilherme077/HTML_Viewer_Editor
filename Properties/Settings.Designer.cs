@@ -47,7 +47,7 @@ namespace SCMCS.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
         public int DistSplitter {
             get {
                 return ((int)(this["DistSplitter"]));
@@ -113,6 +113,17 @@ namespace SCMCS.Properties {
             }
             set {
                 this["AutoSave"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color CorJanela {
+            get {
+                return ((global::System.Drawing.Color)(this["CorJanela"]));
+            }
+            set {
+                this["CorJanela"] = value;
             }
         }
     }
